@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>aft_string_add &mdash; AftString 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
+    <link rel="up" title="AftString" href="../aft-string.html" />
+    <link rel="next" title="aft_string_append" href="aft-string-append.html" />
+    <link rel="prev" title="aft_deallocate" href="aft-deallocate.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="aft-string-add">
+<h1>aft_string_add<a class="headerlink" href="#aft-string-add" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="c.aft_string_add">
+bool <code class="descname">aft_string_add</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;to</em>, const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;from</em>, int<em>&nbsp;index</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a string into another string before the byte at the given index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>to</strong> &#8211; the recieving string</li>
+<li><strong>from</strong> &#8211; the inserted string</li>
+<li><strong>index</strong> &#8211; the index in the recieving string, from zero to its count</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">true if the string is added</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-C"><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;AftString/aft_string.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">AftString</span> <span class="n">price</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="n">u8</span><span class="s">&quot;Price ¢&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">cents</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;99&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">aft_string_add</span><span class="p">(</span><span class="o">&amp;</span><span class="n">price</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cents</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">message</span> <span class="o">=</span> <span class="n">aft_string_get_contents_const</span><span class="p">(</span><span class="o">&amp;</span><span class="n">price</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">);</span>
+
+    <span class="n">aft_string_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">price</span><span class="p">);</span>
+    <span class="n">aft_string_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cents</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="code highlight-python"><div class="highlight"><pre>Price 99¢
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">AftString</a></h1>
+
+
+
+<p class="blurb">A growable string library for C11</p>
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Vavassor&repo=AftString&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">aft_string_add</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Reference</a><ul>
+  <li><a href="../aft-string.html">AftString</a><ul>
+      <li>Previous: <a href="aft-deallocate.html" title="previous chapter">aft_deallocate</a></li>
+      <li>Next: <a href="aft-string-append.html" title="next chapter">aft_string_append</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/reference/aft-string/functions/aft-string-add.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Andrew Dawson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../../../_sources/reference/aft-string/functions/aft-string-add.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

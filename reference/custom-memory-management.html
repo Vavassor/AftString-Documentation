@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Customizing Memory Management &mdash; AftString 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AftString 1.0.0 documentation" href="../index.html" />
+    <link rel="up" title="Reference" href="index.html" />
+    <link rel="next" title="String Modification" href="string-modification.html" />
+    <link rel="prev" title="aft_strings_match" href="aft-string/functions/aft-strings-match.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="customizing-memory-management">
+<h1>Customizing Memory Management<a class="headerlink" href="#customizing-memory-management" title="Permalink to this headline">¶</a></h1>
+<p>By default, AftString uses the C standard library&#8217;s functions for memory
+allocation. To override this behaviour, add the following definition to
+<code class="file docutils literal"><span class="pre">aft_string.h</span></code>.</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#define AFT_USE_CUSTOM_ALLOCATOR</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="aft-string/functions/aft-allocate.html#c.aft_allocate" title="aft_allocate"><code class="xref c c-func docutils literal"><span class="pre">aft_allocate()</span></code></a> and <a class="reference internal" href="aft-string/functions/aft-deallocate.html#c.aft_deallocate" title="aft_deallocate"><code class="xref c c-func docutils literal"><span class="pre">aft_deallocate()</span></code></a> can then be defined by the
+user at link time. The names and function definition must match the
+declarations. There is no way to redefine the functions at run-time, so custom
+memory functions can only be used when building from source or statically
+linking the library.</p>
+<div class="section" id="using-an-allocator">
+<span id="id1"></span><h2>Using An Allocator<a class="headerlink" href="#using-an-allocator" title="Permalink to this headline">¶</a></h2>
+<p>The declarations include an <a class="reference internal" href="../glossary.html#term-allocator"><span class="xref std std-term">allocator</span></a> parameter so that a user-defined
+structure can be used for allocation. This can be used for local or per-thread
+allocation. Global memory allocation functions, like in the C standard library,
+don&#8217;t need to use this.</p>
+<p>The allocator is set only when the string is created and should not be changed.
+This is to ensure the same allocator is used for allocating and deallocating a
+memory block.</p>
+<div class="section" id="allocator-propagation">
+<span id="id2"></span><h3>Allocator Propagation<a class="headerlink" href="#allocator-propagation" title="Permalink to this headline">¶</a></h3>
+<p>Some string operations, such as copying or taking a substring will propagate the
+allocator. This means the new string will inherit the allocator associated with
+the original string. For example, in the case of substring, the new substring
+will be associated with the same allocator as the string it came from.</p>
+<p>Generally this would be fine, but it may be a detail to consider because
+transferring ownership of a string between allocators after it&#8217;s created is
+prevented by design. If transfer is needed, use <a class="reference internal" href="aft-string/functions/aft-string-assign.html#c.aft_string_assign" title="aft_string_assign"><code class="xref c c-func docutils literal"><span class="pre">aft_string_assign()</span></code></a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">AftString</a></h1>
+
+
+
+<p class="blurb">A growable string library for C11</p>
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Vavassor&repo=AftString&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Customizing Memory Management</a><ul>
+<li><a class="reference internal" href="#using-an-allocator">Using An Allocator</a><ul>
+<li><a class="reference internal" href="#allocator-propagation">Allocator Propagation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Reference</a><ul>
+      <li>Previous: <a href="aft-string/functions/aft-strings-match.html" title="previous chapter">aft_strings_match</a></li>
+      <li>Next: <a href="string-modification.html" title="next chapter">String Modification</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/custom-memory-management.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Andrew Dawson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/reference/custom-memory-management.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

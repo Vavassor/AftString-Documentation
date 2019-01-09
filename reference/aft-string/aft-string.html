@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AftString &mdash; AftString 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AftString 1.0.0 documentation" href="../../index.html" />
+    <link rel="up" title="Reference" href="../index.html" />
+    <link rel="next" title="AftCodepointIterator" href="types/aft-codepoint-iterator.html" />
+    <link rel="prev" title="Reference" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="aftstring">
+<h1>AftString<a class="headerlink" href="#aftstring" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="types">
+<h2>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-codepoint-iterator.html">AftCodepointIterator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-maybe-char32.html">AftMaybeChar32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-maybe-int.html">AftMaybeInt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-maybe-string.html">AftMaybeString</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-maybe-uint64.html">AftMaybeUint64</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-memory-block.html">AftMemoryBlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-string.html">AftString</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-string-range.html">AftStringRange</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ascii">
+<h3>ASCII<a class="headerlink" href="#ascii" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-check.html">aft_ascii_check</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-check-range.html">aft_ascii_check_range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-compare-alphabetic.html">aft_ascii_compare_alphabetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-digit-to-int.html">aft_ascii_digit_to_int</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-alphabetic.html">aft_ascii_is_alphabetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-alphanumeric.html">aft_ascii_is_alphanumeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-lowercase.html">aft_ascii_is_lowercase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-newline.html">aft_ascii_is_newline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-numeric.html">aft_ascii_is_numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-space-or-tab.html">aft_ascii_is_space_or_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-uppercase.html">aft_ascii_is_uppercase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-whitespace.html">aft_ascii_is_whitespace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-lowercase.html">aft_ascii_to_lowercase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-lowercase-char.html">aft_ascii_to_lowercase_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-uppercase.html">aft_ascii_to_uppercase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-uppercase-char.html">aft_ascii_to_uppercase_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-uint64-from-string.html">aft_ascii_uint64_from_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-uint64-from-string-range.html">aft_ascii_uint64_from_string_range</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="codepoint-iterator">
+<h3>Codepoint Iterator<a class="headerlink" href="#codepoint-iterator" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-end.html">aft_codepoint_iterator_end</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-get-index.html">aft_codepoint_iterator_get_index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-get-string.html">aft_codepoint_iterator_get_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-next.html">aft_codepoint_iterator_next</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-prior.html">aft_codepoint_iterator_prior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-set-string.html">aft_codepoint_iterator_set_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-codepoint-iterator-start.html">aft_codepoint_iterator_start</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="c-string">
+<h3>C String<a class="headerlink" href="#c-string" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-c-string-deallocate.html">aft_c_string_deallocate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-c-string-deallocate-with-allocator.html">aft_c_string_deallocate_with_allocator</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="memory-allocation">
+<h3>Memory Allocation<a class="headerlink" href="#memory-allocation" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-allocate.html">aft_allocate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-deallocate.html">aft_deallocate</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="string">
+<h3>String<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-add.html">aft_string_add</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append.html">aft_string_append</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append-c-string.html">aft_string_append_c_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append-char.html">aft_string_append_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-assign.html">aft_string_assign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy.html">aft_string_copy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-destroy.html">aft_string_destroy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-ends-with.html">aft_string_ends_with</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-first-char.html">aft_string_find_first_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-first-string.html">aft_string_find_first_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-last-char.html">aft_string_find_last_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-last-string.html">aft_string_find_last_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-buffer.html">aft_string_from_buffer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-buffer-with-allocator.html">aft_string_from_buffer_with_allocator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-c-string.html">aft_string_from_c_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-c-string-with-allocator.html">aft_string_from_c_string_with_allocator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-capacity.html">aft_string_get_capacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-contents.html">aft_string_get_contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-contents-const.html">aft_string_get_contents_const</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-count.html">aft_string_get_count</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-initialise.html">aft_string_initialise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-initialise-with-allocator.html">aft_string_initialise_with_allocator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-remove.html">aft_string_remove</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-replace.html">aft_string_replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-reserve.html">aft_string_reserve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-starts-with.html">aft_string_starts_with</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-substring.html">aft_string_substring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-to-c-string.html">aft_string_to_c_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-to-c-string-with-allocator.html">aft_string_to_c_string_with_allocator</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="string-range">
+<h3>String Range<a class="headerlink" href="#string-range" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-range-check.html">aft_string_range_check</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="strings">
+<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-strings-match.html">aft_strings_match</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">AftString</a></h1>
+
+
+
+<p class="blurb">A growable string library for C11</p>
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=Vavassor&repo=AftString&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AftString</a><ul>
+<li><a class="reference internal" href="#types">Types</a></li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#ascii">ASCII</a></li>
+<li><a class="reference internal" href="#codepoint-iterator">Codepoint Iterator</a></li>
+<li><a class="reference internal" href="#c-string">C String</a></li>
+<li><a class="reference internal" href="#memory-allocation">Memory Allocation</a></li>
+<li><a class="reference internal" href="#string">String</a></li>
+<li><a class="reference internal" href="#string-range">String Range</a></li>
+<li><a class="reference internal" href="#strings">Strings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Reference</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Reference</a></li>
+      <li>Next: <a href="types/aft-codepoint-iterator.html" title="next chapter">AftCodepointIterator</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/reference/aft-string/aft-string.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Andrew Dawson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../../_sources/reference/aft-string/aft-string.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
