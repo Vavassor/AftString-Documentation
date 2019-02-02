@@ -25,9 +25,6 @@
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
-    <link rel="up" title="AftString" href="../aft-string.html" />
-    <link rel="next" title="aft_string_find_first_string" href="aft-string-find-first-string.html" />
-    <link rel="prev" title="aft_string_ends_with" href="aft-string-ends-with.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -65,29 +62,6 @@
 
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-C"><div class="highlight"><pre><span class="cp">#include</span> <span class="cpf">&lt;AftString/aft_string.h&gt;</span><span class="cp"></span>
-
-<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">AftString</span> <span class="n">string</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;aft_string_append_c_string(&amp;string, </span><span class="se">\&quot;</span><span class="s">?</span><span class="se">\&quot;</span><span class="s">)&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
-    <span class="n">AftString</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;&amp;amp;&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
-
-    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">aft_string_find_first_char</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">,</span> <span class="sc">&#39;&amp;&#39;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
-    <span class="n">AftStringRange</span> <span class="n">range</span> <span class="o">=</span> <span class="p">{</span><span class="n">index</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">};</span>
-    <span class="n">aft_string_replace</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">range</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">entity</span><span class="p">);</span>
-
-    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">message</span> <span class="o">=</span> <span class="n">aft_string_get_contents_const</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">);</span>
-    
-    <span class="n">aft_string_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">);</span>
-    <span class="n">aft_string_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">entity</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 <p>Output:</p>
 <div class="code highlight-python"><div class="highlight"><pre>aft_string_append_c_string(&amp;amp;string, &quot;?&quot;)
 </pre></div>
@@ -129,12 +103,6 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../../index.html">Documentation overview</a><ul>
-  <li><a href="../../index.html">Reference</a><ul>
-  <li><a href="../aft-string.html">AftString</a><ul>
-      <li>Previous: <a href="aft-string-ends-with.html" title="previous chapter">aft_string_ends_with</a></li>
-      <li>Next: <a href="aft-string-find-first-string.html" title="next chapter">aft_string_find_first_string</a></li>
-  </ul></li>
-  </ul></li>
   </ul></li>
 </ul>
 </div>

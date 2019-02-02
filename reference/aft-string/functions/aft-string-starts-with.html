@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>aft_string_starts_with &mdash; AftString 1.0.0 documentation</title>
+    <title>aft_string_slice_starts_with &mdash; AftString 1.0.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -25,9 +25,6 @@
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
-    <link rel="up" title="AftString" href="../aft-string.html" />
-    <link rel="next" title="aft_string_substring" href="aft-string-substring.html" />
-    <link rel="prev" title="aft_string_reserve" href="aft-string-reserve.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -40,23 +37,23 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="aft-string-starts-with">
-<h1>aft_string_starts_with<a class="headerlink" href="#aft-string-starts-with" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="aft-string-slice-starts-with">
+<h1>aft_string_slice_starts_with<a class="headerlink" href="#aft-string-slice-starts-with" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="c.aft_string_starts_with">
-bool <code class="descname">aft_string_starts_with</code><span class="sig-paren">(</span>const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;string</em>, const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;lookup</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_starts_with" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determine if a string has a given beginning.</p>
+<dt id="c.aft_string_slice_starts_with">
+bool <code class="descname">aft_string_slice_starts_with</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string-slice.html#c.AftStringSlice" title="AftStringSlice">AftStringSlice</a><em>&nbsp;slice</em>, <a class="reference internal" href="../types/aft-string-slice.html#c.AftStringSlice" title="AftStringSlice">AftStringSlice</a><em>&nbsp;lookup</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_slice_starts_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a slice has a given beginning.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>string</strong> &#8211; the string</li>
+<li><strong>slice</strong> &#8211; the slice</li>
 <li><strong>lookup</strong> &#8211; the beginning</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>true if the string has the beginning</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>true if the slice has the beginning</p>
 <p>This is always true when the beginning is the empty string.</p>
 </p>
 </td>
@@ -93,12 +90,6 @@ bool <code class="descname">aft_string_starts_with</code><span class="sig-paren"
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../../../index.html">Documentation overview</a><ul>
-  <li><a href="../../index.html">Reference</a><ul>
-  <li><a href="../aft-string.html">AftString</a><ul>
-      <li>Previous: <a href="aft-string-reserve.html" title="previous chapter">aft_string_reserve</a></li>
-      <li>Next: <a href="aft-string-substring.html" title="next chapter">aft_string_substring</a></li>
-  </ul></li>
-  </ul></li>
   </ul></li>
 </ul>
 </div>

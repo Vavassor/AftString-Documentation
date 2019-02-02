@@ -61,17 +61,8 @@ allocation. Global memory allocation functions, like in the C standard library,
 don&#8217;t need to use this.</p>
 <p>The allocator is set only when the string is created and should not be changed.
 This is to ensure the same allocator is used for allocating and deallocating a
-memory block.</p>
-<div class="section" id="allocator-propagation">
-<span id="id2"></span><h3>Allocator Propagation<a class="headerlink" href="#allocator-propagation" title="Permalink to this headline">¶</a></h3>
-<p>Some string operations, such as copying or taking a substring will propagate the
-allocator. This means the new string will inherit the allocator associated with
-the original string. For example, in the case of substring, the new substring
-will be associated with the same allocator as the string it came from.</p>
-<p>Generally this would be fine, but it may be a detail to consider because
-transferring ownership of a string between allocators after it&#8217;s created is
-prevented by design. If transfer is needed, use <a class="reference internal" href="aft-string/functions/aft-string-assign.html#c.aft_string_assign" title="aft_string_assign"><code class="xref c c-func docutils literal"><span class="pre">aft_string_assign()</span></code></a>.</p>
-</div>
+memory block. If an allocator needs to be transferred, use
+<a class="reference internal" href="aft-string/functions/aft-string-assign.html#c.aft_string_assign" title="aft_string_assign"><code class="xref c c-func docutils literal"><span class="pre">aft_string_assign()</span></code></a>.</p>
 </div>
 </div>
 
@@ -101,10 +92,7 @@ prevented by design. If transfer is needed, use <a class="reference internal" hr
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Customizing Memory Management</a><ul>
-<li><a class="reference internal" href="#using-an-allocator">Using An Allocator</a><ul>
-<li><a class="reference internal" href="#allocator-propagation">Allocator Propagation</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#using-an-allocator">Using An Allocator</a></li>
 </ul>
 </li>
 </ul>

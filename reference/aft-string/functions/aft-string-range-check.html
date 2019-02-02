@@ -27,7 +27,7 @@
     <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
     <link rel="up" title="AftString" href="../aft-string.html" />
     <link rel="next" title="aft_strings_match" href="aft-strings-match.html" />
-    <link rel="prev" title="aft_string_to_c_string_with_allocator" href="aft-string-to-c-string-with-allocator.html" />
+    <link rel="prev" title="aft_string_reserve" href="aft-string-reserve.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -44,7 +44,7 @@
 <h1>aft_string_range_check<a class="headerlink" href="#aft-string-range-check" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="c.aft_string_range_check">
-bool <code class="descname">aft_string_range_check</code><span class="sig-paren">(</span>const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;string</em>, const <a class="reference internal" href="../types/aft-string-range.html#c.AftStringRange" title="AftStringRange">AftStringRange</a>*<em>&nbsp;range</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_range_check" title="Permalink to this definition">¶</a></dt>
+bool <code class="descname">aft_string_range_check</code><span class="sig-paren">(</span>const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;string</em>, int<em>&nbsp;start</em>, int<em>&nbsp;end</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_range_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Determine if a range is valid and within the bounds of a string.</p>
 <p>A range is allowed to be empty, where the start and end are the same.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -53,7 +53,8 @@ bool <code class="descname">aft_string_range_check</code><span class="sig-paren"
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>string</strong> &#8211; the string</li>
-<li><strong>range</strong> &#8211; the range</li>
+<li><strong>start</strong> &#8211; the index of the first byte in the range</li>
+<li><strong>end</strong> &#8211; the index one past the last byte in the range</li>
 </ul>
 </td>
 </tr>
@@ -94,7 +95,7 @@ bool <code class="descname">aft_string_range_check</code><span class="sig-paren"
   <li><a href="../../../index.html">Documentation overview</a><ul>
   <li><a href="../../index.html">Reference</a><ul>
   <li><a href="../aft-string.html">AftString</a><ul>
-      <li>Previous: <a href="aft-string-to-c-string-with-allocator.html" title="previous chapter">aft_string_to_c_string_with_allocator</a></li>
+      <li>Previous: <a href="aft-string-reserve.html" title="previous chapter">aft_string_reserve</a></li>
       <li>Next: <a href="aft-strings-match.html" title="next chapter">aft_strings_match</a></li>
   </ul></li>
   </ul></li>

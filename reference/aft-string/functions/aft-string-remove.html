@@ -44,7 +44,7 @@
 <h1>aft_string_remove<a class="headerlink" href="#aft-string-remove" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="c.aft_string_remove">
-void <code class="descname">aft_string_remove</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;string</em>, const <a class="reference internal" href="../types/aft-string-range.html#c.AftStringRange" title="AftStringRange">AftStringRange</a>*<em>&nbsp;range</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_remove" title="Permalink to this definition">¶</a></dt>
+void <code class="descname">aft_string_remove</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;string</em>, int<em>&nbsp;start</em>, int<em>&nbsp;end</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a range of bytes from a string.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -52,7 +52,8 @@ void <code class="descname">aft_string_remove</code><span class="sig-paren">(</s
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>string</strong> &#8211; the string</li>
-<li><strong>range</strong> &#8211; the range</li>
+<li><strong>start</strong> &#8211; the index of the first byte in the range</li>
+<li><strong>end</strong> &#8211; the index one past the last byte in the range</li>
 </ul>
 </td>
 </tr>

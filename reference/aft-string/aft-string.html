@@ -53,7 +53,7 @@
 <li class="toctree-l1"><a class="reference internal" href="types/aft-maybe-uint64.html">AftMaybeUint64</a></li>
 <li class="toctree-l1"><a class="reference internal" href="types/aft-memory-block.html">AftMemoryBlock</a></li>
 <li class="toctree-l1"><a class="reference internal" href="types/aft-string.html">AftString</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types/aft-string-range.html">AftStringRange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/aft-string-slice.html">AftStringSlice</a></li>
 </ul>
 </div>
 </div>
@@ -64,7 +64,6 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-check.html">aft_ascii_check</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-check-range.html">aft_ascii_check_range</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-compare-alphabetic.html">aft_ascii_compare_alphabetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-digit-to-int.html">aft_ascii_digit_to_int</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-alphabetic.html">aft_ascii_is_alphabetic</a></li>
@@ -75,12 +74,12 @@
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-space-or-tab.html">aft_ascii_is_space_or_tab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-uppercase.html">aft_ascii_is_uppercase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-is-whitespace.html">aft_ascii_is_whitespace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-reverse.html">aft_ascii_reverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-reverse-range.html">aft_ascii_reverse_range</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-lowercase.html">aft_ascii_to_lowercase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-lowercase-char.html">aft_ascii_to_lowercase_char</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-uppercase.html">aft_ascii_to_uppercase</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-to-uppercase-char.html">aft_ascii_to_uppercase_char</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-uint64-from-string.html">aft_ascii_uint64_from_string</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-ascii-uint64-from-string-range.html">aft_ascii_uint64_from_string_range</a></li>
 </ul>
 </div>
 </div>
@@ -102,6 +101,8 @@
 <h3>C String<a class="headerlink" href="#c-string" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-c-string-copy-string.html">aft_c_string_copy_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-c-string-copy-string-with-allocator.html">aft_c_string_copy_string_with_allocator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-c-string-deallocate.html">aft_c_string_deallocate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-c-string-deallocate-with-allocator.html">aft_c_string_deallocate_with_allocator</a></li>
 </ul>
@@ -124,18 +125,15 @@
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append.html">aft_string_append</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append-c-string.html">aft_string_append_c_string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append-char.html">aft_string_append_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-append-slice.html">aft_string_append_slice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-assign.html">aft_string_assign</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy.html">aft_string_copy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy-with-allocator.html">aft_string_copy_with_allocator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy-c-string.html">aft_string_copy_c_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy-c-string-with-allocator.html">aft_string_copy_c_string_with_allocator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy-slice.html">aft_string_copy_slice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-copy-slice-with-allocator.html">aft_string_copy_slice_with_allocator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-destroy.html">aft_string_destroy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-ends-with.html">aft_string_ends_with</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-first-char.html">aft_string_find_first_char</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-first-string.html">aft_string_find_first_string</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-last-char.html">aft_string_find_last_char</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-find-last-string.html">aft_string_find_last_string</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-buffer.html">aft_string_from_buffer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-buffer-with-allocator.html">aft_string_from_buffer_with_allocator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-c-string.html">aft_string_from_c_string</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-from-c-string-with-allocator.html">aft_string_from_c_string_with_allocator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-capacity.html">aft_string_get_capacity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-contents.html">aft_string_get_contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-get-contents-const.html">aft_string_get_contents_const</a></li>
@@ -145,10 +143,6 @@
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-remove.html">aft_string_remove</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-replace.html">aft_string_replace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-reserve.html">aft_string_reserve</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-starts-with.html">aft_string_starts_with</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-substring.html">aft_string_substring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-to-c-string.html">aft_string_to_c_string</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-to-c-string-with-allocator.html">aft_string_to_c_string_with_allocator</a></li>
 </ul>
 </div>
 </div>
@@ -157,6 +151,31 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="functions/aft-string-range-check.html">aft_string_range_check</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="string-slice">
+<h3>String Slice<a class="headerlink" href="#string-slice" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice.html">aft_string_slice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-count.html">aft_string_slice_count</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-end.html">aft_string_slice_end</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-ends-with.html">aft_string_slice_ends_with</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-find-first-char.html">aft_string_slice_find_first_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-find-first-string.html">aft_string_slice_find_first_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-find-last-char.html">aft_string_slice_find_last_char</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-find-last-string.html">aft_string_slice_find_last_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-from-buffer.html">aft_string_slice_from_buffer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-from-c-string.html">aft_string_slice_from_c_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-from-string.html">aft_string_slice_from_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-in-string.html">aft_string_slice_in_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-matches.html">aft_string_slice_matches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-remove-end.html">aft_string_slice_remove_end</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-remove-start.html">aft_string_slice_remove_start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-start.html">aft_string_slice_start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-starts-with.html">aft_string_slice_starts_with</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions/aft-string-slice-string.html">aft_string_slice_string</a></li>
 </ul>
 </div>
 </div>
@@ -205,6 +224,7 @@
 <li><a class="reference internal" href="#memory-allocation">Memory Allocation</a></li>
 <li><a class="reference internal" href="#string">String</a></li>
 <li><a class="reference internal" href="#string-range">String Range</a></li>
+<li><a class="reference internal" href="#string-slice">String Slice</a></li>
 <li><a class="reference internal" href="#strings">Strings</a></li>
 </ul>
 </li>

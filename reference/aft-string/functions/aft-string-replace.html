@@ -44,7 +44,7 @@
 <h1>aft_string_replace<a class="headerlink" href="#aft-string-replace" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="c.aft_string_replace">
-bool <code class="descname">aft_string_replace</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;to</em>, const <a class="reference internal" href="../types/aft-string-range.html#c.AftStringRange" title="AftStringRange">AftStringRange</a>*<em>&nbsp;range</em>, const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;from</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_replace" title="Permalink to this definition">¶</a></dt>
+bool <code class="descname">aft_string_replace</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;to</em>, int<em>&nbsp;start</em>, int<em>&nbsp;end</em>, const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;from</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_replace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace a range of bytes in a string with a replacement string.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -52,7 +52,8 @@ bool <code class="descname">aft_string_replace</code><span class="sig-paren">(</
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>to</strong> &#8211; the string</li>
-<li><strong>range</strong> &#8211; the range to replace</li>
+<li><strong>start</strong> &#8211; the index of the first byte in the range</li>
+<li><strong>start</strong> &#8211; the index one past the last byte in the range</li>
 <li><strong>from</strong> &#8211; the replacement</li>
 </ul>
 </td>

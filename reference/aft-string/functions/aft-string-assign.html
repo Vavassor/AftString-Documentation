@@ -27,7 +27,7 @@
     <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
     <link rel="up" title="AftString" href="../aft-string.html" />
     <link rel="next" title="aft_string_copy" href="aft-string-copy.html" />
-    <link rel="prev" title="aft_string_append_c_string" href="aft-string-append-c-string.html" />
+    <link rel="prev" title="aft_string_append_slice" href="aft-string-append-slice.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -47,8 +47,7 @@
 bool <code class="descname">aft_string_assign</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;to</em>, const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;from</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_assign" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overwrite the contents of one string with another string.</p>
 <p>The strings do not need to be associated with the same allocator, which
-makes it usable for an allocator transfer as described in
-<a class="reference internal" href="../../custom-memory-management.html#allocator-propagation"><span>Allocator Propagation</span></a>.</p>
+makes it usable for an allocator transfer.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -136,7 +135,7 @@ and then another
   <li><a href="../../../index.html">Documentation overview</a><ul>
   <li><a href="../../index.html">Reference</a><ul>
   <li><a href="../aft-string.html">AftString</a><ul>
-      <li>Previous: <a href="aft-string-append-c-string.html" title="previous chapter">aft_string_append_c_string</a></li>
+      <li>Previous: <a href="aft-string-append-slice.html" title="previous chapter">aft_string_append_slice</a></li>
       <li>Next: <a href="aft-string-copy.html" title="next chapter">aft_string_copy</a></li>
   </ul></li>
   </ul></li>

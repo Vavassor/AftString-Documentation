@@ -26,7 +26,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
     <link rel="up" title="AftString" href="../aft-string.html" />
-    <link rel="next" title="aft_string_destroy" href="aft-string-destroy.html" />
+    <link rel="next" title="aft_string_copy_with_allocator" href="aft-string-copy-with-allocator.html" />
     <link rel="prev" title="aft_string_assign" href="aft-string-assign.html" />
    
   
@@ -46,8 +46,7 @@
 <dt id="c.aft_string_copy">
 <a class="reference internal" href="../types/aft-maybe-string.html#c.AftMaybeString" title="AftMaybeString">AftMaybeString</a> <code class="descname">aft_string_copy</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;string</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a copy of a string.</p>
-<p>The copy inherits the <a class="reference internal" href="../../../glossary.html#term-allocator"><span class="xref std std-term">allocator</span></a> associated with the original string.
-See also <a class="reference internal" href="../../custom-memory-management.html#allocator-propagation"><span>Allocator Propagation</span></a>.</p>
+<p>The resulting string is not associated with an <a class="reference internal" href="../../../glossary.html#term-allocator"><span class="xref std std-term">allocator</span></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -72,7 +71,7 @@ See also <a class="reference internal" href="../../custom-memory-management.html
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">AftString</span> <span class="n">me</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;It&#39;s me!&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">me</span> <span class="o">=</span> <span class="n">aft_string_copy_c_string</span><span class="p">(</span><span class="s">&quot;It&#39;s me!&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
 
     <span class="n">AftString</span> <span class="n">clone</span> <span class="o">=</span> <span class="n">aft_string_copy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">me</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
 
@@ -130,7 +129,7 @@ See also <a class="reference internal" href="../../custom-memory-management.html
   <li><a href="../../index.html">Reference</a><ul>
   <li><a href="../aft-string.html">AftString</a><ul>
       <li>Previous: <a href="aft-string-assign.html" title="previous chapter">aft_string_assign</a></li>
-      <li>Next: <a href="aft-string-destroy.html" title="next chapter">aft_string_destroy</a></li>
+      <li>Next: <a href="aft-string-copy-with-allocator.html" title="next chapter">aft_string_copy_with_allocator</a></li>
   </ul></li>
   </ul></li>
   </ul></li>

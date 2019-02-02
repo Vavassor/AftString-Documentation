@@ -71,8 +71,8 @@ bool <code class="descname">aft_string_append</code><span class="sig-paren">(</s
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">AftString</span> <span class="n">readout</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;Date: &quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
-    <span class="n">AftString</span> <span class="n">date</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;2018-12-09&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">readout</span> <span class="o">=</span> <span class="n">aft_string_copy_c_string</span><span class="p">(</span><span class="s">&quot;Date: &quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">date</span> <span class="o">=</span> <span class="n">aft_string_copy_c_string</span><span class="p">(</span><span class="s">&quot;2018-12-09&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
     <span class="n">aft_string_append</span><span class="p">(</span><span class="o">&amp;</span><span class="n">readout</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">date</span><span class="p">);</span>
     
     <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">message</span> <span class="o">=</span> <span class="n">aft_string_get_contents_const</span><span class="p">(</span><span class="o">&amp;</span><span class="n">readout</span><span class="p">);</span>

@@ -27,7 +27,7 @@
     <link rel="top" title="AftString 1.0.0 documentation" href="../../../index.html" />
     <link rel="up" title="AftString" href="../aft-string.html" />
     <link rel="next" title="aft_string_ends_with" href="aft-string-ends-with.html" />
-    <link rel="prev" title="aft_string_copy" href="aft-string-copy.html" />
+    <link rel="prev" title="aft_string_copy_c_string_with_allocator" href="aft-string-copy-c-string-with-allocator.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -73,7 +73,7 @@ bool <code class="descname">aft_string_destroy</code><span class="sig-paren">(</
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">AftString</span> <span class="n">string</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;unseen text&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">string</span> <span class="o">=</span> <span class="n">aft_string_copy_c_string</span><span class="p">(</span><span class="s">&quot;unseen text&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
 
     <span class="n">aft_string_destroy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">);</span>
     <span class="n">aft_string_append_c_string</span><span class="p">(</span><span class="o">&amp;</span><span class="n">string</span><span class="p">,</span> <span class="s">&quot;shown instead&quot;</span><span class="p">);</span>
@@ -130,7 +130,7 @@ bool <code class="descname">aft_string_destroy</code><span class="sig-paren">(</
   <li><a href="../../../index.html">Documentation overview</a><ul>
   <li><a href="../../index.html">Reference</a><ul>
   <li><a href="../aft-string.html">AftString</a><ul>
-      <li>Previous: <a href="aft-string-copy.html" title="previous chapter">aft_string_copy</a></li>
+      <li>Previous: <a href="aft-string-copy-c-string-with-allocator.html" title="previous chapter">aft_string_copy_c_string_with_allocator</a></li>
       <li>Next: <a href="aft-string-ends-with.html" title="next chapter">aft_string_ends_with</a></li>
   </ul></li>
   </ul></li>

@@ -44,20 +44,20 @@
 <h1>aft_string_add<a class="headerlink" href="#aft-string-add" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="c.aft_string_add">
-bool <code class="descname">aft_string_add</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;to</em>, const <a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;from</em>, int<em>&nbsp;index</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Insert a string into another string before the byte at the given index.</p>
+bool <code class="descname">aft_string_add</code><span class="sig-paren">(</span><a class="reference internal" href="../types/aft-string.html#c.AftString" title="AftString">AftString</a>*<em>&nbsp;to</em>, <a class="reference internal" href="../types/aft-string-slice.html#c.AftStringSlice" title="AftStringSlice">AftStringSlice</a><em>&nbsp;from</em>, int<em>&nbsp;index</em><span class="sig-paren">)</span><a class="headerlink" href="#c.aft_string_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a slice into another string before the byte at the given index.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>to</strong> &#8211; the recieving string</li>
-<li><strong>from</strong> &#8211; the inserted string</li>
+<li><strong>from</strong> &#8211; the inserted slice</li>
 <li><strong>index</strong> &#8211; the index in the recieving string, from zero to its count</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">true if the string is added</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">true if the slice is added</p>
 </td>
 </tr>
 </tbody>
@@ -72,8 +72,8 @@ bool <code class="descname">aft_string_add</code><span class="sig-paren">(</span
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">AftString</span> <span class="n">price</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="n">u8</span><span class="s">&quot;Price ¢&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
-    <span class="n">AftString</span> <span class="n">cents</span> <span class="o">=</span> <span class="n">aft_string_from_c_string</span><span class="p">(</span><span class="s">&quot;99&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">price</span> <span class="o">=</span> <span class="n">aft_string_copy_c_string</span><span class="p">(</span><span class="n">u8</span><span class="s">&quot;Price ¢&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">AftString</span> <span class="n">cents</span> <span class="o">=</span> <span class="n">aft_string_copy_c_string</span><span class="p">(</span><span class="s">&quot;99&quot;</span><span class="p">).</span><span class="n">value</span><span class="p">;</span>
     <span class="n">aft_string_add</span><span class="p">(</span><span class="o">&amp;</span><span class="n">price</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cents</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
 
     <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">message</span> <span class="o">=</span> <span class="n">aft_string_get_contents_const</span><span class="p">(</span><span class="o">&amp;</span><span class="n">price</span><span class="p">);</span>
